@@ -133,7 +133,10 @@ namespace ListsPractice
 
                 if (userMovie == "QUIT")
                 {
-                    break;
+                    foreach (string movie in movies)
+                    {
+                        Console.WriteLine(movie);
+                    }
                 }
                 else if (movies.Contains(userMovie))
                 {
@@ -146,11 +149,6 @@ namespace ListsPractice
                 }
             }
             while (userMovie != "QUIT");
-
-            foreach (string movie in movies)
-            {
-                Console.WriteLine(movies);
-            }
 
         }
     }
