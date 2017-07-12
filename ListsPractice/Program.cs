@@ -75,6 +75,82 @@ namespace ListsPractice
             //    Console.WriteLine("I like fish, too!");
             //}
 
+            // Create a list with the following numbers: 1 23 9 77 922 6 32 63 14 5
+            // Use the contains method with the following values: 23 77 15
+            // Remove these elements: 23 77 32 6
+            // Use Contains() again on these values: 23 77 15
+
+            //List<int> numberList = new List<int> { 1, 23, 9, 77, 922, 6, 32, 63, 14, 5 };
+
+            //if (numberList.Contains(23) || numberList.Contains(77) || numberList.Contains(15))
+            //{
+            //    Console.WriteLine("true");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("false");
+            //}
+
+            //// or you can do this to see if its true:
+            //Console.WriteLine(numberList.Contains(23));
+            //Console.WriteLine(numberList.Contains(77));
+            //Console.WriteLine(numberList.Contains(15));
+
+            //numberList.Remove(23); // numberList.RemoveAt() will remove numbers at specific indexes
+            //numberList.Remove(77);
+            //numberList.Remove(32);
+            //numberList.Remove(6);
+
+            //if (numberList.Contains(23) || numberList.Contains(77) || numberList.Contains(15))
+            //{
+            //    Console.WriteLine("true");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("false");
+            //}
+
+            //// or you can do this to see if its true:
+            //Console.WriteLine(numberList.Contains(23));
+            //Console.WriteLine(numberList.Contains(77));
+            //Console.WriteLine(numberList.Contains(15));
+
+            // Ask user for a movie
+            // Check list to see if movie is contained in list
+            // If movie is not in list, add it & inform the user that the movie has been added
+            // If movie is in the list, let them know that the movie is on the way
+
+            // The user should be able to add as many movies as they want
+            // If the user enter quit, the program should exit & show full list
+
+            List<string> movies = new List<string> { "MINIONS", "ALADIN", "CARS" };
+            string userMovie;
+
+            do
+            {
+                Console.WriteLine("Please enter a movie.");
+                userMovie = Console.ReadLine().ToUpper();
+
+                if (userMovie == "QUIT")
+                {
+                    break;
+                }
+                else if (movies.Contains(userMovie))
+                {
+                    Console.WriteLine("Movie is on it's way.");
+                }
+                else
+                {
+                    movies.Add(userMovie);
+                    Console.WriteLine("Movie has been added.");
+                }
+            }
+            while (userMovie != "QUIT");
+
+            foreach (string movie in movies)
+            {
+                Console.WriteLine(movies);
+            }
 
         }
     }
